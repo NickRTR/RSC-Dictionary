@@ -162,7 +162,7 @@ export const codes = {
 		additionalInformation: true
 	},
 	417: { title: "Expectation Failed", description: "This response code means the expectation indicated by the Expect request header field cannot be met by the server.", additionalInformation: true },
-	418: { title: "I'm a teapot", description: "The server refuses the attempt to brew coffee with a teapot.", additionalInformation: true },
+	418: { title: "I'm a teapot", description: "The server refuses the attempt to brew coffee with a teapot. ☕", additionalInformation: true },
 	421: {
 		title: "Misdirected Request",
 		description:
