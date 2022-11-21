@@ -3,10 +3,11 @@ import { codes } from "$lib/codeList";
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
-		const code = data.get("code");
+		const input = data.get("code");
+		const code = codes[input];
 
-		if (codes[code] !== undefined) {
-			return { code, title: codes[code].title, additionalInformation: codes[code].additionalInformation };
+		if (code !== undefined) {
+			return { code: input, title: code.title, description: code.description, additionalInformation: code.additionalInformation };
 		} else {
 			return { error: "Invalid Status Code. Try 418 ;)" };
 		}

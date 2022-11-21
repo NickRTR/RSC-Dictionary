@@ -18,6 +18,7 @@
 		<p class="error">{form.error}</p>
 	{:else if form?.code}
 		<p>{form.code}: {form.title}</p>
+		<p><b>Description:</b> {form.description}</p>
 		{#if form.additionalInformation}
 			<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{form.code}" title="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{form.code}" rel="noreferrer" target="_blank">Additional Information</a>
 		{/if}
