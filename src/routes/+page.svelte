@@ -2,8 +2,6 @@
 	import { enhance } from "$app/forms";
 
 	export let form;
-
-	$: console.log(form);
 </script>
 
 <body>
@@ -25,3 +23,9 @@
 		{/if}
 	{/if}
 </body>
+
+<style>
+	.error {
+		color: red;
+	}
+</style>
