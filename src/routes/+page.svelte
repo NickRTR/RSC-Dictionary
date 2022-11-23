@@ -2,6 +2,22 @@
 	import { enhance } from "$app/forms";
 
 	export let form;
+
+	function type(code) {
+		if (code >= 500) {
+			return "Server error responses"
+		} else if (code >= 400) {
+			return "Client error responses"
+		} else if (code >= 300) {
+			return "Redirection messages"
+		} else if (code >= 200) {
+			return "Successful responses"
+		} else if (code >= 100) {
+			return "Informational responses"
+		} else {
+			return "You broke the system."
+		}
+	}
 </script>
 
 <body>
@@ -18,7 +34,8 @@
 		<p class="error">{form.error}</p>
 	{:else if form?.code}
 		<p>{form.code}: {form.title}</p>
-		<p><b>Description:</b> {form.description}</p>
+		<p><b>Type: </b>{type(form.code)}</p>
+		<p><b>Description: </b>{form.description}</p>
 		{#if form.additionalInformation}
 			<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{form.code}" title="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{form.code}" rel="noreferrer" target="_blank"
 				>Additional Information</a
