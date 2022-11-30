@@ -9,7 +9,7 @@ export const actions = {
 		if (code !== undefined) {
 			return { code: input, title: code.title, description: code.description, additionalInformation: code.additionalInformation };
 		} else {
-			return { error: "Invalid Status Code. Try 418 ;)" };
+			return { error: "Invalid Status Code. Try 418 :)" };
 		}
 	}
 };
