@@ -5,17 +5,17 @@
 
 	function type(code) {
 		if (code >= 500) {
-			return "Server error responses"
+			return "Server error responses";
 		} else if (code >= 400) {
-			return "Client error responses"
+			return "Client error responses";
 		} else if (code >= 300) {
-			return "Redirection messages"
+			return "Redirection messages";
 		} else if (code >= 200) {
-			return "Successful responses"
+			return "Successful responses";
 		} else if (code >= 100) {
-			return "Informational responses"
+			return "Informational responses";
 		} else {
-			return "You broke the system."
+			return "You broke the system.";
 		}
 	}
 </script>
