@@ -26,7 +26,7 @@
 	<p>HTTP Response Status Code Dictionary</p>
 
 	<form method="POST" use:enhance>
-		<input type="number" name="code" placeholder="Code" />
+		<input type="number" name="code" placeholder="Code" required />
 		<button type="submit">Search</button>
 	</form>
 
@@ -47,5 +47,46 @@
 <style>
 	.error {
 		color: red;
+	}
+
+	body {
+		margin-inline: 0.5rem;
+	}
+
+	h1 {
+		color: var(--accent-orange);
+	}
+
+	a {
+		color: var(--accent-green);
+	}
+
+	input {
+		border-radius: 0.5rem;
+		padding: 0.25rem;
+		border: none;
+		border: 3px solid white;
+		outline: none;
+		transition: all 0.1s ease-in-out;
+	}
+
+	input:hover,
+	input:focus {
+		border-color: var(--accent-orange);
+	}
+
+	button {
+		border-radius: 0.5rem;
+		padding: 0.25rem 0.5rem;
+		font-weight: bold;
+		background-color: var(--accent-orange);
+		border: 3px solid var(--accent-orange);
+		transition: all 0.1s ease-in-out;
+		outline: none;
+	}
+
+	button:hover,
+	button:focus {
+		background-color: white;
 	}
 </style>

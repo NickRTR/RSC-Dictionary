@@ -4,6 +4,11 @@ export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 		const input = data.get("code");
+
+		if (input.length == 0) {
+			return { error: "Please enter a Code in order to get a definition." };
+		}
+
 		const code = codes[input];
 
 		if (code !== undefined) {
