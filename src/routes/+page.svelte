@@ -79,6 +79,7 @@
 		border-radius: 0.5rem;
 		padding: 0.25rem 0.5rem;
 		font-weight: bold;
+		color: black;
 		background-color: var(--accent-orange);
 		border: 3px solid var(--accent-orange);
 		transition: all 0.1s ease-in-out;
